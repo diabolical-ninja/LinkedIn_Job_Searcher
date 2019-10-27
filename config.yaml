@@ -1,0 +1,6 @@
+username: <LinkedIn Username>
+password: <LinkedIn Password>
+selenium: <Location of the chrome web driver>
+job_details:
+    title: <Job title>
+    location: <Location>
