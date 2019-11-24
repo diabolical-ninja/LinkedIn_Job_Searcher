@@ -140,7 +140,7 @@ search_jobs(config['job_details']['title'], config['job_details']['location'])
 
 
 #%%
-time.sleep(2)
+time.sleep(5)
 results_pages = driver.find_elements_by_class_name('artdeco-pagination__indicator')
 num_results = len(results_pages)
 current_page = 1
@@ -148,6 +148,8 @@ job_details = []
 
 print(f"{num_results} pages of search results found")
 
+
+#%%
 #%%
 while current_page <= num_results:
 
