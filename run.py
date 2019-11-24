@@ -57,12 +57,20 @@ def get_jobs():
 
 
 def search_jobs(job, location):
-    # Enter job & location
-    element_text_entry('jobs-search-box-keyword-id-ember35', job)
-    element_text_entry('jobs-search-box-location-id-ember35', location)
+    # Find input elements
+    input_elements = driver.find_elements_by_class_name('jobs-search-box__text-input')
+    
+    # Enter job tile
+    search_title = input_elements[0]
+    search_title.send_keys(job)
+
+    # Enter job location
+    search_location = input_elements[2]
+    search_location.send_keys(location)
 
     # Run search
     find_and_click_element('jobs-search-box__submit-button')
+
 
 def failover(element_list, index, class_name):
     try:
